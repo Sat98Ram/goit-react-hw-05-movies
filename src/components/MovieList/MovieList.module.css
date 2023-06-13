@@ -1,0 +1,33 @@
+.movieLink {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+.movieName {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.poster {
+  width: 72px;
+  height: 100%;
+}
+
+.movieListItem {
+  padding: 4px;
+  display: flex;
+  gap: 24px;
+  background-color: lightgrey;
+  transition: box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.movieListItem:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.movieListItem:hover {
+  box-shadow: 7px 6px 10px 5px rgb(37, 37, 37);
+}

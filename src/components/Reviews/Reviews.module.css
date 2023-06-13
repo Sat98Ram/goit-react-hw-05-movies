@@ -1,0 +1,14 @@
+.reviewItem {
+  padding: 8px;
+  display: flex;
+  gap: 16px;
+  background-color: lightgrey;
+}
+
+.reviewItem:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.reviewAuthor {
+  width: 200px;
+}

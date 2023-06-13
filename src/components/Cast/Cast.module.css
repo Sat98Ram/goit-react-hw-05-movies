@@ -1,0 +1,36 @@
+.castList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.castCard {
+  /* height: 460px; */
+  width: 240px;
+  background-color: rgb(0, 9, 6);
+  box-shadow: 7px 6px 10px 5px rgb(37, 37, 37);
+}
+
+.castImg {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.imageWrap {
+  padding: 0;
+  height: 320px;
+  width: 100%;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+.cardText {
+  color: aliceblue;
+  padding: 16px;
+}
+
+.castName {
+  margin-bottom: 8px;
+}

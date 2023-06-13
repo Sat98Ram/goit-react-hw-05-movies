@@ -1,0 +1,19 @@
+.searchForm {
+  padding: 0;
+  margin: 0;
+}
+
+.btnSearch {
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.btnSearch:hover,
+.btnSearch:focus {
+  background-color: black;
+  color: #eae7e7;
+}
+.searchInput {
+  margin-right: 8px;
+}
