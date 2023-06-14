@@ -36,22 +36,23 @@ const MovieDetails = () => {
           <div className={css.movieInfo}>
             <h1>{movie.title}</h1>
             <p>User popularity: {Math.round(votes * 10)}%</p>
-            <h2>Overview</h2>
+            <h2 className={css.subTitle}>Overview</h2>
             <p>{movie.overview}</p>
-            <h2>Genres</h2>
+            <h2 className={css.subTitle}>Genres</h2>
             <ul>
               {movie.genres.map(genre => (
                 <li key={genre.id}>{genre.name}</li>
               ))}
             </ul>
-            <h2>Release date:</h2> <p>{movie.release_date}</p>
+            <h2 className={css.subTitle}>Release date:</h2>{' '}
+            <p>{movie.release_date}</p>
           </div>
         </div>
         <p className={css.textInfo}>Additional information</p>
-        <Link to={`reviews`} location={location} className={css.sectionLink}>
+        <Link to={`reviews`} state={location.state} className={css.sectionLink}>
           Reviews
         </Link>
-        <Link to={`cast`} location={location} className={css.sectionLink}>
+        <Link to={`cast`} state={location.state} className={css.sectionLink}>
           Cast
         </Link>
       </Section>

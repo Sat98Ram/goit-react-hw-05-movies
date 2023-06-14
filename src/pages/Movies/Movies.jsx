@@ -35,10 +35,10 @@ const MoviesPage = movie => {
 
   return (
     <Section>
+      <Search onSubmit={onSubmit} />
       <Link to={'/'} className={css.btnReturn}>
         Go home
       </Link>
-      <Search onSubmit={onSubmit} />
       <MovieList movies={movies} location={location} />
     </Section>
   );

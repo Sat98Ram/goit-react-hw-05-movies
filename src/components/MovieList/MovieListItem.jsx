@@ -10,12 +10,14 @@ export const MovieListItem = ({ movie, location }) => {
         className={css.movieLink}
       >
         <div className={css.poster}>
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt="poster"
-            width="72"
-            className={css.thumbnailPoster}
-          />
+          {movie.poster_path && (
+            <img
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt="poster"
+              width="72"
+              className={css.thumbnailPoster}
+            />
+          )}
         </div>
         <div>
           <h2 className={css.movieName}> {movie.title}</h2>

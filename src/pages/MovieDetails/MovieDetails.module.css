@@ -43,3 +43,7 @@
 .sectionLink:focus {
   color: rgb(0, 4, 225);
 }
+
+.subTitle {
+  margin: 8px 0;
+}
