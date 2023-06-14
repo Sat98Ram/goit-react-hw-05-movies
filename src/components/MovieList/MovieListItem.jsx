@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import css from './MovieList.module.css';
+import PropTypes from 'prop-types';
 
 export const MovieListItem = ({ movie, location }) => {
   return (
@@ -26,4 +27,9 @@ export const MovieListItem = ({ movie, location }) => {
       </Link>
     </li>
   );
+};
+
+MovieListItem.propTypes = {
+  movie: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };

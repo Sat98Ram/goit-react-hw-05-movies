@@ -1,4 +1,5 @@
 import css from './Cast.module.css';
+import PropTypes from 'prop-types';
 
 export const CastItem = ({ profile, name, role }) => {
   return (
@@ -18,4 +19,10 @@ export const CastItem = ({ profile, name, role }) => {
       </div>
     </li>
   );
+};
+
+CastItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  profile: PropTypes.string,
+  role: PropTypes.string,
 };

@@ -1,5 +1,6 @@
 import css from './MovieInfo.module.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const MoreInfo = ({ state }) => {
   return (
@@ -13,4 +14,8 @@ export const MoreInfo = ({ state }) => {
       </Link>
     </>
   );
+};
+
+MoreInfo.propTypes = {
+  state: PropTypes.object.isRequired,
 };

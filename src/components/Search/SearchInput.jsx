@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import css from './Search.module.css';
+import PropTypes from 'prop-types';
 
 export const Search = ({ onSubmit }) => {
   const [search, setSearch] = useState('');
@@ -11,7 +12,6 @@ export const Search = ({ onSubmit }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(search);
     onSubmit(search);
   };
 
@@ -29,4 +29,8 @@ export const Search = ({ onSubmit }) => {
       <button className={css.btnSearch}>Search</button>
     </form>
   );
+};
+
+Search.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };

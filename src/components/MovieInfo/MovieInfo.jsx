@@ -1,4 +1,5 @@
 import css from './MovieInfo.module.css';
+import PropTypes from 'prop-types';
 
 export const MovieInfo = ({ poster, title, overview, genres, date, votes }) => {
   return (
@@ -24,4 +25,13 @@ export const MovieInfo = ({ poster, title, overview, genres, date, votes }) => {
       </div>
     </div>
   );
+};
+
+MovieInfo.propTypes = {
+  poster: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  overview: PropTypes.string,
+  genres: PropTypes.array,
+  date: PropTypes.string,
+  votes: PropTypes.number,
 };
