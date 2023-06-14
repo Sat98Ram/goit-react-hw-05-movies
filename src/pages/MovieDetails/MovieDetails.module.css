@@ -16,34 +16,3 @@
   background-color: black;
   color: #eae7e7;
 }
-
-.poster {
-  width: 320px;
-}
-
-.movie {
-  display: flex;
-  gap: 24px;
-  margin-bottom: 16px;
-}
-
-.textInfo {
-  margin-bottom: 4px;
-}
-
-.sectionLink {
-  text-decoration: none;
-  color: rgb(0, 0, 174);
-}
-.sectionLink:not(:last-child) {
-  margin-right: 8px;
-}
-
-.sectionLink:hover,
-.sectionLink:focus {
-  color: rgb(0, 4, 225);
-}
-
-.subTitle {
-  margin: 8px 0;
-}

@@ -3,6 +3,8 @@ import { Suspense, useEffect, useState } from 'react';
 import { Link, useParams, Outlet, useLocation } from 'react-router-dom';
 import { Section } from 'components/Section/Section';
 import css from './MovieDetails.module.css';
+import { MovieInfo } from 'components/MovieInfo/MovieInfo';
+import { MoreInfo } from 'components/MovieInfo/MoreInfo';
 
 const MovieDetails = () => {
   const location = useLocation();
@@ -14,6 +16,7 @@ const MovieDetails = () => {
       setMovie(data);
     });
   }, [movieId]);
+
   if (!movie) {
     return;
   }
@@ -26,35 +29,16 @@ const MovieDetails = () => {
         <Link to={location.state} className={css.btnReturn}>
           Go back
         </Link>
-        <div className={css.movie}>
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt="poster"
-            width="320"
-            className={css.poster}
-          />
-          <div className={css.movieInfo}>
-            <h1>{movie.title}</h1>
-            <p>User popularity: {Math.round(votes * 10)}%</p>
-            <h2 className={css.subTitle}>Overview</h2>
-            <p>{movie.overview}</p>
-            <h2 className={css.subTitle}>Genres</h2>
-            <ul>
-              {movie.genres.map(genre => (
-                <li key={genre.id}>{genre.name}</li>
-              ))}
-            </ul>
-            <h2 className={css.subTitle}>Release date:</h2>{' '}
-            <p>{movie.release_date}</p>
-          </div>
-        </div>
-        <p className={css.textInfo}>Additional information</p>
-        <Link to={`reviews`} state={location.state} className={css.sectionLink}>
-          Reviews
-        </Link>
-        <Link to={`cast`} state={location.state} className={css.sectionLink}>
-          Cast
-        </Link>
+        <MovieInfo
+          poster={movie.poster_path}
+          title={movie.title}
+          overview={movie.overview}
+          genres={movie.genres}
+          date={movie.release_date}
+          votes={votes}
+        />
+
+        <MoreInfo state={location.state} />
       </Section>
 
       <Suspense fallback={null}>

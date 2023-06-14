@@ -30,6 +30,5 @@ export const getCast = async movieID => {
 
 export const getReviews = async movieID => {
   const { data } = await axios.get(`/movie/${movieID}/reviews?language=en-US`);
-  console.log(data);
   return data.results;
 };
